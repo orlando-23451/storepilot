@@ -56,6 +56,9 @@ const LayoutComponent = ({
           <span className="app-brand-mark">SP</span>
           <div>
             <strong>StorePilot</strong>
+            <div style={{ color: '#2185d0', fontSize: '10px', fontWeight: 'bold' }}>
+            🧪 QA VERIFIED - MODO TEST
+            </div>
             <div className="muted-copy">{user?.store_name || 'Tienda actual'}</div>
           </div>
         </div>
