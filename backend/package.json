@@ -1,0 +1,29 @@
+{
+  "name": "storepilot-backend",
+  "version": "0.1.0",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "@koa/cors": "5.0.0",
+    "basic-auth": "2.0.1",
+    "dotenv": "16.4.5",
+    "joi": "17.13.3",
+    "jsonwebtoken": "9.0.2",
+    "koa": "2.15.3",
+    "koa-better-router": "2.1.1",
+    "koa-body": "6.0.1",
+    "koa-helmet": "8.0.0",
+    "koa-jwt": "4.0.4",
+    "koa2-swagger-ui": "5.10.0",
+    "mysql2": "3.11.3",
+    "swagger-jsdoc": "6.2.8",
+    "uuid": "10.0.0"
+  },
+  "devDependencies": {
+    "jest": "30.0.5"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "short_name": "StorePilot",
+  "name": "StorePilot SaaS",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00549F",
+  "background_color": "#F4F7FB"
+}

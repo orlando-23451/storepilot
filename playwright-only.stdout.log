@@ -1,0 +1,38 @@
+
+Running 2 tests using 1 worker
+
+  ok 1 tests\e2e\app.spec.js:33:1 › renders landing page sections and CTA (17.1s)
+  x  2 tests\e2e\app.spec.js:41:1 › allows login and sales capture flow with mocked api (1.0m)
+
+
+  1) tests\e2e\app.spec.js:41:1 › allows login and sales capture flow with mocked api ──────────────
+
+    [31mTest timeout of 60000ms exceeded.[39m
+
+    Error: locator.fill: Test timeout of 60000ms exceeded.
+    Call log:
+    [2m  - waiting for getByLabel('Correo electrónico')[22m
+
+
+      119 |
+      120 |   await page.goto('/login');
+    > 121 |   await page.getByLabel('Correo electrónico').fill('admin@storepilot.local');
+          |                                               ^
+      122 |   await page.getByLabel('Contraseña').fill('Admin123!');
+      123 |   await page.getByRole('button', { name: /entrar al sistema/i }).click();
+      124 |
+        at C:\Users\opizano\Desktop\V_CODING II\tests\e2e\app.spec.js:121:47
+
+    Error Context: test-results\app-allows-login-and-sales-capture-flow-with-mocked-api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\app-allows-login-and-sales-capture-flow-with-mocked-api\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\app-allows-login-and-sales-capture-flow-with-mocked-api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests\e2e\app.spec.js:41:1 › allows login and sales capture flow with mocked api ───────────────
+  1 passed (2.1m)

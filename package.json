@@ -1,0 +1,22 @@
+{
+  "name": "storepilot-saas",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "start:frontend": "npm --workspace frontend start",
+    "start:backend": "npm --workspace backend start",
+    "build:frontend": "npm --workspace frontend run build",
+    "test": "npm --workspace backend test",
+    "test:backend": "npm --workspace backend test",
+    "test:frontend": "npm --workspace frontend test -- --watchAll=false",
+    "test:e2e": "npm --workspace frontend run build && playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.53.2",
+    "playwright": "1.53.2"
+  }
+}

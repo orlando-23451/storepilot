@@ -1,0 +1,9 @@
+- ID: ADR-001
+- Fecha: 2026-03-20
+- Tema: Estructura del repositorio para frontend y backend
+- Contexto: `ARCHITECTURE.md` define una estructura base para frontend y backend, pero ambos incluyen un directorio `src/` en raíz. En un repositorio unificado esto crea colisión de nombres y dificulta mantenimiento y automatización.
+- Decisión: Organizar el repositorio como workspace con dos aplicaciones hermanas: `frontend/` y `backend/`. Cada una conserva internamente la estructura exigida por `ARCHITECTURE.md`.
+- Alternativas consideradas: usar una sola raíz con carpetas mezcladas; renombrar uno de los `src/`; separar en repositorios distintos.
+- Consecuencias: la estructura es explícita, mantenible y compatible con workspaces de npm. Se requiere documentar scripts raíz para operar ambos proyectos.
+- Riesgos: si futuros estándares asumen rutas absolutas en raíz, habrá que ajustarlos al workspace sin cambiar el stack.
+- Impacto en documentación relacionada: aclara la implementación práctica de `ARCHITECTURE.md` sin modificar sus decisiones de stack ni organización interna por aplicación.
